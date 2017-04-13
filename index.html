@@ -3,7 +3,10 @@
 <html>
 <head>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Montserrat" rel="stylesheet"> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     
@@ -13,26 +16,44 @@
     <meta charset="UTF-8">
     
     <title>Albert Yeoh</title>
+    
+    <script>
+        $(document).ready(function(){
+            $('.scrollspy').scrollSpy();
+            var options = [
+                        {selector: '.fire1', offset: 200, callback:  function(el) {
+                                Materialize.showStaggeredList($(el));
+                              }  },
+                        {selector: '.fire2', offset: 200, callback:  function(el) {
+                                Materialize.showStaggeredList($(el));
+                              } },
+                        ];
+            Materialize.scrollFire(options);
+        });
+    </script>
 </head>
+
 <body>
-    <div class="navbar-fixed" section="scrollspy">
-        <nav id="navbar">
+    <div class="navbar-fixed" >
+        <nav id="navbar" style="background-color: white">
              <div class="nav-wrapper">
-             <a href="#!" class="brand-logo left">Albert Yeoh</a>
+             <a href="#!" class="brand-logo left" style="padding-left:20px;">Albert Yeoh</a>
              <ul class="right hide-on-med-and-down">
-                 <li class="active"><a href="#About">About</a></li>
+                 <li><a href="#About">About</a></li>
                  <li><a href="#Skills">Skills</a></li>
                  <li><a href="#Education">Education</a></li>
                  <li><a href="#Experience">Experience</a></li>
                  <li><a href="#Projects">Projects</a></li>
-                 <li><a href="#Contact">Contact</a></li>
+                 <!--<li><a href="#Contact">Contact</a></li> -->
             </ul>
           </div>
         </nav>
     </div>
 
-    <div class="parallax-container">
-        <div class="parallax"><img class="responsive-img" src="images/Aussie4.jpg"></div>
+    <div class="parallax-container" style="height: 40%">
+        <div class="parallax"><img class="responsive-img" src="images/Aussie4.jpg" ></div>
+        <h1 class="valign center-align" style="padding-top: 60px;">Software Developer | Games Developer</h1>
+        <!--<span style="padding-top: 600px;">Software Developer | Games developer</span>-->
     </div>  
       
     <div id="About" class="section scrollspy">
@@ -44,23 +65,30 @@
                     </div>
                 </div>
             <div class="row">
-                <div class="offset-m1 col m5">
-                    <img class="circle responsive-img" src="images/ArmyShot.JPG" alt="">
+                <div class="offset-m4 col m4">
+                    <img class="circle responsive-img" src="images/DoubleBert.JPG" alt="">
                 </div>
-                <div class="col m5" style="padding-top:20px">
-                    <p>Hello! I am Albert, a sophomore in the National University of Singapore (NUS).
-                    </p>
+                
+                <div class="row">
+                    <div class="offset-m1 col m10">
+                        
+                       
+                        <p class="center align">
+                            Hello. I am Albert, a sophomore in the National University of Singapore, pursuing a Bachelor of Computing (Honours) in Computer Science.
+                        </p>
                     
-                    <p>Throughout my journey in NUS, I have developed a passion in interactive media, games and web design. I love the process of developing a product and seeing users enjoy it.
-                    </p>    
-                    
+                        <p class="center align">
+                            Technology and programming, to me, is a brilliant tool that enhances our lives. The passion I possess in software development, games and UI/UX builds the foundation of my career path. I use this passion, together with determination and resilience to spur me on to produce quality work.
+
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
       
-    <div class="parallax-container valign-wrapper">
+    <div class="parallax-container valign-wrapper" style="opacity: 0.7;">
         <div class="parallax"><img class="reponsive-img" src="images/looking_ahead.JPG" style="width: 100%"></div>
     </div>
       
@@ -72,52 +100,83 @@
                 <div class="divider"></div>
            </div>
         </div>
+        
         <div class="row">
-            <div class="offset-m1 col m2">
-                <img class="responsive-img" src="images/javaLogo.png" alt="">
-            </div>
-            <div class="col m2">
-                <img class="responsive-img" src="images/javascriptlogo.png" alt="">
-            </div>
-            <div class="col m2">
-                <img class="responsive-img" src="images/htmlcssLogo.png" alt="">
-            </div>
-            <div class="col m2">
-                <img class="responsive-img" src="images/cssLogo.png" alt="">
-            </div>
-            <div class="col m2">
-                <img class="responsive-img" src="images/nodeJsLogo.png" alt="">
+            <div class=offset-m2>
+                <div class="row">
+            
+                    <div class="offset-m2 col m2">
+                        <img class="responsive-img skillSize" src="images/javaLogo.png" alt="">
+                        <span><h6 class="center-align">Proficient</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/javascriptlogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/htmlcssLogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/cssLogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                </div>
+            
             </div>
         </div>
         <div class="row">
-                <div class="offset-m1 col m2">
-                    <img class="responsive-img" src="images/bootstrapLogo.png" alt="">
+            <div class=offset-m2>
+                <div class="row">
+            
+                    <div class="offset-m2 col m2">
+                        <img class="responsive-img skillSize" src="images/bootstrapLogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/materialisecss.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/unrealLogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/unityLogo.jpeg" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
                 </div>
-                <div class="col m2">
-                    <img class="responsive-img" src="images/unityLogo.jpeg" alt="">
-                </div>
-                <div class="col m2">
-                    <img class="responsive-img" src="images/unrealLogo.png" alt="">
-                </div>
-                <div class="col m2">
-                    <img class="responsive-img" src="images/photoshopLogo.png" alt="">
-                </div>
-                <div class="col m2">
-                    <img class="responsive-img" src="images/githubpurpleLogo.png" alt="">
-                </div>
+            
+            </div>
         </div>
         <div class="row">
-                <div class="offset-m1 col m2">
-                    <img class="responsive-img" src="images/materialisecss.png" alt="">
+            <div class=offset-m2>
+                <div class="row">
+            
+                    <div class="offset-m2 col m2">
+                        <img class="responsive-img skillSize" src="images/githubpurpleLogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/OpenGLLogo.png" alt="">
+                        <span><h6 class="center-align">Intermediate</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/nodeJsLogo.png" alt="">
+                        <span><h6 class="center-align">Basic</h6></span>
+                    </div>
+                    <div class="col m2">
+                        <img class="responsive-img skillSize" src="images/photoshopLogo.png" alt="">
+                        <span><h6 class="center-align">Basic</h6></span>
+                    </div>
                 </div>
-                <div class="col m2">
-                    <img class="responsive-img" src="images/OpenGLLogo.png" alt="">
-                </div>
+            
             </div>
+        </div>
     </div> 
     
        
-    <div class="parallax-container">
+    <div class="parallax-container" style="opacity: 0.7;">
         <div class="parallax"><img src="images/Korea1.jpg"></div>
     </div>
        
@@ -160,12 +219,12 @@
                 <img class="responsive-img" src="images/innovaLogo.png">
             </div>
             <div class="offset-m1 col m4">
-                <b>Innov Junior College (IJC)</b>
+                <b>Innova Junior College (IJC)</b>
                 <br>
                 <i class="grey-text">Jan 2011 - Dec 2012</i>
                 
                 <ul.browser-default>
-                    <li>Singapore-Cambridge General Certificate of Education Advanced Level - General Paper, Mother Tongue (Chinese), Project Work, Geography, Chemistry, Mathematics, Economics</li>
+                    <li>GCE "A" Levels</li>
                     <li>Outdoor Adventure Club (ODAC) Chairperson</li>
                 </ul.browser-default>
             </div>
@@ -174,7 +233,7 @@
     </div>
 
     
-    <div class="parallax-container">
+    <div class="parallax-container" style="opacity: 0.7;">
         <div class="parallax"><img src="images/Korea3.jpg"></div>
     </div>
 
@@ -192,7 +251,7 @@
             <div class="offset-m1 col m4">
                 <b>National University of Singapore (NUS)</b>
                 <br>
-                <i class="grey-text">School of Computing Open Day Ambassador (Mar 2016 & 2017)</i>
+                <i class="grey-text">School of Computing Open Day Ambassador <br>Mar 2016 & 2017</i>
                 
                 <ul.browser-default>
                     <li>Responsible for capturing day events as photographer</li>
@@ -214,7 +273,7 @@
             <div class="offset-m1 col m4">
                 <b>Singapore Armed Forces (SAF)</b>
                 <br>
-                <i class="grey-text">Artillery Weapon Trainer (May 2013 - June 2015)</i>
+                <i class="grey-text">Artillery Weapon Trainer <br>May 2013 - June 2015</i>
                 
                 <ul.browser-default>
                     <li>Conducted training for servicemen and cadets with 4 other assistant trainers</li>
@@ -240,7 +299,7 @@
             <div class="offset-m1 col m4">
                 <b>Goodwood Park Hotel</b>
                 <br>
-                <i class="grey-text">Banquet server (Oct 2010 - Dec 2010)</i>
+                <i class="grey-text">Banquet server <br>Oct 2010 - Dec 2010</i>
                 
                 <ul.browser-default>
                     <li>Ensure a fine dining experience for customers</li>
@@ -252,7 +311,7 @@
     </div>
             
 
-    <div class="parallax-container">
+    <div class="parallax-container" style="opacity: 0.7;">
         <div class="parallax"><img src="images/Aussie2.jpg"></div>
     </div>
    
@@ -264,6 +323,66 @@
                 <div class="divider"></div>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="offset-m3 col m2">
+                <img class="responsive-img center" src="images/DayNight_Banner.jpeg">
+            </div>
+            <div class="offset-m1 col m4">
+                <b>DayNight</b>
+                <br>
+                <i class="grey-text">CS3247: Game Development Project First Prize</i>
+                
+                <p>
+                    DayNight is HTC Vive VR Zombie Shooter survival game. Experience an immersive shooting game, optimised for VR. This game was developed in 8 weeks using Unreal Engine.
+                </p>
+                
+                <p>
+                   Checkout the trailer <a href="https://www.youtube.com/watch?v=hNJFuC3kzWY">here!</a><br>
+                   Watch the full gameplay <a href="https://youtu.be/_kUrZ3gAy2I">here!</a>
+                </p>
+                
+                    
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="offset-m2 col m8">
+                <div class="divider"></div>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="offset-m3 col m2">
+                <img class="responsive-img" src="images/SpawtsLogo.png">
+            </div>
+            <div class="offset-m1 col m4">
+                <b>Spawts</b>
+                <br>
+                <i class="grey-text">CS3240: Interaction design Project</i>
+                
+                <p>
+                    Spawts is a platform for pet owners to find people to help them take care of their pets when they are away. Spawts gives owners a platform to post a listing of when they will be away and how much they are willing to pay for a pet sitter to take care of their pets. Pet sitters can then browse available listings and chat up the owner for details.
+                </p>
+                
+                <p>
+                   Checkout our poster <a href="images/Spawts_poster.pdf">here!</a><br>
+                   Watch the promo video <a href="https://www.youtube.com/watch?v=l0g1XncfzZ0&feature=youtu.be">here!</a>
+                </p>
+                
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="offset-m2 col m8">
+                <div class="divider"></div>
+            </div>
+        </div>
+        
+        
+        
+        
         <div class="row">
             <div class="offset-m3 col m2">
                 <img class="responsive-img" src="images/TooCloseForComfort.png">
@@ -278,7 +397,8 @@
                 </p>
                 
                 <p>
-                    No risk, no reward!
+                    No risk, no reward! <br>
+                    Download the game <a href="https://lwwenz.itch.io/too-close-for-comfort">here!</a>
                 </p>
             </div>
         </div>
@@ -299,10 +419,7 @@
                 <i class="grey-text">Node.js server</i>
                 
                 <p>
-                    This is the Raspberry Pi I run at home with a custom built Minecraft Lego shell. This server runs my own Node.js HTTP and SSH server. You can check out this link to access my Pi! 
-                </p>
-                <p>
-                    121.7.188.8:56789
+                    This is the Raspberry Pi I run at home with a custom built Minecraft Lego shell. This server runs my own Node.js HTTP and SSH server. You can check out this <a href="121.7.188.8:56789">link</a> to access my Pi.
                 </p>
             </div>
         </div>
@@ -329,22 +446,20 @@
         </div>
     </div>
 
-   
-    <footer class="page-footer">
+    <!--
+    <footer class="page-footer" style="background-color">
         <div id="Contact" class="section scrollspy">
-        <h2 class="center">Contact</h2>
-        <div class="row">
-            <div class="offset-m1 col m2">
-                Email: e0003079@u.nus.edu
+            <h2 class="center">Contact</h2>
+            <div class="row">
+                <div class="offset-m1 col m2">
+                    Email: e0003079@u.nus.edu
+                </div>
             </div>
-        </div>
         
-    </div>
+        </div>
     </footer>
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    
 
 </body>
 </html>

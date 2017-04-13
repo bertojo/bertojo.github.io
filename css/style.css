@@ -55,3 +55,17 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+h2 {
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skillSize {
+    max-height: 150px;
+    max-width: 150px;
+    padding-left: 10%;
+}
