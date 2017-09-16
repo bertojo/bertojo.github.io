@@ -29,6 +29,16 @@ p {
     width: 100%;
   }
 
+.trabble-container {
+  max-width: 120px;
+  margin-left: 40px;
+  margin-top: 26px;
+}
+
+.dearest-container {
+      margin: 45px 0px 0px 27px;
+}
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
